@@ -24,7 +24,7 @@ const Navbar = () => {
         </div>
         <div className="nav-section">
             <img width={100}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1200px-H%26M-Logo.svg.png"/>
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1200px-H%26M-Logo.svg.png" alt=""/>
         </div>
         <div className="menu-area">
             <ul className="menu-list">
