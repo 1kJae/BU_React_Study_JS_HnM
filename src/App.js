@@ -6,7 +6,8 @@ import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
 
 // 1. 전체 상품페이지, 로그인, 상품 상세페이지
-// 1-1. 네비게이션 바바
+// 1-1. 네비게이션 바
+
 // 2. 전체 상품페이지에서는 전체 상품을 볼 수 있다.
 // 3. 로그인 버튼을 누르면 로그인 페이지가 나온다.
 // 3. 상품디테일을 눌렀으나, 로그인이 안 되어 있을 경우 로그인 페이지가 먼저 나온다.
