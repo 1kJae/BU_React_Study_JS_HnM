@@ -1,0 +1,37 @@
+.product-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s ease; 
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05); 
+    z-index: 2;
+  }
+  
+  .product-card img {
+    width: 100%;           
+    height: auto;
+    display: block;
+  }
+  
+  .choice-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    background: #198754;
+    color: #fff;
+  }
+  
+  .new-badge {
+    font-size: 0.75rem;
+    color: #d63384;
+  }
+  
+  .price {
+    font-weight: 500;
+  }
