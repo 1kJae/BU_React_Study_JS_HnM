@@ -6,9 +6,9 @@ const ProductAll = () => {
   const [productList, setProductList] = useState([]);
   
   const getProducts = async () => {
-    let response = await fetch(`/products`);
+    let response = await fetch('/products.json');
     let data = await response.json();
-    setProductList(data);
+    setProductList(data.products);
   };
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const ProductAll = () => {
             <Col lg={3}>
               <ProductCard item={menu} />
             </Col>
-          ))};
+          ))}
         </Row>
       </Container>
     </div>
