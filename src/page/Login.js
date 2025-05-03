@@ -1,12 +1,16 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap';
-import './Login.css';    
+import './Login.css';   
+import { useNavigate } from 'react-router-dom'; 
 
-const Login = () => {
+const Login = ({ setAuthenticate }) => {
+  const navigate = useNavigate();
   const loginUser = (event) => {
     event.preventDefault();
-    console.log("로그인");
-  }
+    setAuthenticate(true);
+    navigate("/");
+  };
+  
   return (
     <Container className="login-container">
       <Form className="login-box shadow-sm" onSubmit={(event) => loginUser(event)}>
