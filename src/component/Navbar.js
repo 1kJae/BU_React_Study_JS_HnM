@@ -4,7 +4,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faUser} from '@fortawesome/free-regular-svg-icons'
 import { useNavigate } from 'react-router-dom'; 
 
-const Navbar = () => {
+const Navbar = ({ authenticate, setAuthenticate }) => {
     const navigate = useNavigate();
     const menuList = [
         "여성",
@@ -16,12 +16,29 @@ const Navbar = () => {
         "Sale",
         "지속가능성",
     ];
+
+    const handleAuthClick = () => {
+        if (authenticate) {
+            setAuthenticate(false);
+            navigate("/");
+        } else {
+            navigate("/login");
+        }
+    };
+
+    const search = (event) => {
+        if(event.key === "Enter"){
+            let keyword = event.target.value;
+            navigate(`/?q=${keyword}`);
+        }
+    }
+
   return (
     <div>
         <div>
-            <div className="login-button" onClick={() => navigate('/login')} >
+            <div className="login-button" onClick={handleAuthClick} >
                 <FontAwesomeIcon icon={faUser} />
-                <span>로그인</span>
+                <span>{authenticate ? "로그아웃" : "로그인"}</span>
             </div>
         </div>
         <div className="nav-section">
@@ -36,7 +53,7 @@ const Navbar = () => {
             </ul>
             <div className="search-bar">
                 <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                <input type="text" className="search-input"/>
+                <input type="text" className="search-input" onKeyPress={(event) => search(event)}/>
             </div>
         </div>
     </div>
