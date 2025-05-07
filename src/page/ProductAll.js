@@ -25,7 +25,7 @@ const ProductAll = () => {
     if (location.search.includes('q=')) {
       navigate('/', { replace: true });
     }
-  }, []);
+  }, [location.search, navigate]);
 
   useEffect(() => {
     if (searchQuery) {
@@ -43,7 +43,7 @@ const ProductAll = () => {
       <Container className="pt-4">
         <Row className="g-4">
           {filteredList.map((menu, idx) => (
-            <Col lg={3} key={idx}>
+            <Col xs={12} sm={6} md={4} lg={3} key={idx}>
               <ProductCard item={menu} />
             </Col>
           ))}

@@ -24,7 +24,7 @@ import PrivateRoute from './Route/PrivateRoute';
 function App() {
   let [authenticate, setAuthenticate] = useState(false);
   useEffect(() => {
-    console.log("asd", authenticate);
+    
   }, [authenticate]);
   return (
     <div>
